@@ -1,4 +1,6 @@
 package org.chernikov.simulation.model.environment;
 
-public class Rock {
+import org.chernikov.simulation.model.Entity;
+
+public class Rock extends Entity {
 }

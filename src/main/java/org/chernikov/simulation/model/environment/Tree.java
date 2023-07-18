@@ -1,4 +1,6 @@
 package org.chernikov.simulation.model.environment;
 
-public class Tree {
+import org.chernikov.simulation.model.Entity;
+
+public class Tree extends Entity {
 }
