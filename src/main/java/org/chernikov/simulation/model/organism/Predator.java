@@ -1,17 +1,17 @@
 package org.chernikov.simulation.model.organism;
 
+import org.chernikov.simulation.model.Coordinate;
+import org.chernikov.simulation.util.EntityEmoji;
+
 public class Predator extends Creature {
 
-    private final String name;
     private final int attackPower;
 
-    public Predator(String name, int attackPower) {
-        this.name = name;
+    public Predator(int speed, int hp, int attackPower, Coordinate coordinates) {
+        this.speed = speed;
+        this.hp = hp;
         this.attackPower = attackPower;
-    }
-
-    public String getName() {
-        return name;
+        this.coordinates = coordinates;
     }
 
     public int getAttackPower() {
@@ -21,5 +21,10 @@ public class Predator extends Creature {
     @Override
     public void makeMove() {
 
+    }
+
+    @Override
+    public String getEmojiRepresentation() {
+        return EntityEmoji.PREDATOR;
     }
 }
