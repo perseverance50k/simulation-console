@@ -19,30 +19,33 @@ public class MapRenderer {
     private final GameMap gameMap = new GameMap();
     private final String[][] mapSpatialRepresentation = new String[MapProperties.HEIGHT][MapProperties.WIDTH];
 
-    // TODO: refactor this
     private Entity createRandomEnvironmentObject() {
         int entityIndex = generateRandomEntityIndex();
         Entity entity;
 
-        if (entityIndex <= 69) entity = new Earth();
-        else if (entityIndex <= 72)  entity = new Tree();
-        else if (entityIndex <= 85) entity = new Grass();
-        else if (entityIndex <= 95) entity = new Rock();
-        else if (entityIndex <= 97) entity = new Predator(generateRandomSpeedValue(),
-                                                          generateRandomHPValue(),
-                                                          generateRandomAttackPowerValue(),
-                                                          generateRandomCoordinates());
-        else if (entityIndex <= 100) entity = new Herbivore(generateRandomSpeedValue(),
-                                                            generateRandomHPValue(),
-                                                            generateRandomCoordinates());
+        if (entityIndex <= 60) entity = new Earth();
+        else if (entityIndex <= 75)  entity = new Tree();
+        else if (entityIndex <= 90) entity = new Grass();
+        else if (entityIndex <= 100) entity = new Rock();
         else throw new IllegalStateException("Incorrect entity index!");
 
         return entity;
     }
 
-    // TODO: implement this
     private Creature createRandomCreature() {
-        return null;
+        int creatureIndex = generateRandomEntityIndex();
+        Creature creature;
+
+        if (creatureIndex <= 70) creature = new Herbivore(generateRandomSpeedValue(),
+                                                          generateRandomHPValue(),
+                                                          generateRandomCoordinates());
+        else if (creatureIndex <= 100) creature = new Predator(generateRandomSpeedValue(),
+                                                          generateRandomHPValue(),
+                                                          generateRandomAttackPowerValue(),
+                                                          generateRandomCoordinates());
+        else throw new IllegalStateException("Incorrect entity index!");
+
+        return creature;
     }
 
     // TODO: revise the name of this method
@@ -66,12 +69,17 @@ public class MapRenderer {
     }
 
     private Coordinate generateRandomCoordinates() {
-        int x = ThreadLocalRandom.current().nextInt(0, MapProperties.WIDTH + 1);
-        int y = ThreadLocalRandom.current().nextInt(0, MapProperties.HEIGHT + 1);
+        int x = ThreadLocalRandom.current().nextInt(0, MapProperties.WIDTH);
+        int y = ThreadLocalRandom.current().nextInt(0, MapProperties.HEIGHT);
         return new Coordinate(y, x);
     }
 
     public void renderInitialMap() {
+        renderMapEnvironment();
+        renderCreaturesOnMap();
+    }
+
+    private void renderMapEnvironment() {
         for (String[] mapRow : mapSpatialRepresentation) {
             for (int i = 0; i < mapRow.length; i++) {
                 mapRow[i] = createRandomEnvironmentObject().getEmojiRepresentation();
@@ -79,10 +87,20 @@ public class MapRenderer {
         }
     }
 
-    private void renderMapEnvironment() {
-        for (String[] mapRow : mapSpatialRepresentation) {
-            for (int i = 0; i < mapRow.length; i++) {
-                mapRow[i] = createRandomEnvironmentObject().getEmojiRepresentation();
+    private void renderCreaturesOnMap() {
+        int numberOfCreatures = MapProperties.NUMBER_OF_CREATURES;
+        int creaturesCreatedCount = 0;
+        int x;
+        int y;
+
+        while (creaturesCreatedCount < numberOfCreatures) {
+            Creature creature = createRandomCreature();
+            x = creature.getCoordinates().getX();
+            y = creature.getCoordinates().getY();
+            if (mapSpatialRepresentation[y][x].equals("\uD83D\uDFEB")) {
+                mapSpatialRepresentation[y][x] = creature.getEmojiRepresentation();
+                gameMap.addCreature(creature);
+                creaturesCreatedCount++;
             }
         }
     }

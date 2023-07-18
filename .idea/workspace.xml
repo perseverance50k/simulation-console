@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15f56233-72bc-43d4-b551-0591b0e6b5f0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/map/MapRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/model/environment/Earth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/util/CreatureProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/util/MapProperties.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/Simulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/map/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/map/GameMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/map/Renderer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/model/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/model/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/model/environment/Rock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/model/environment/Rock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/model/environment/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/model/environment/Tree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/model/environment/resource/Grass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/model/environment/resource/Grass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/model/organism/Herbivore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/model/organism/Herbivore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/model/organism/Predator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/model/organism/Predator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/map/MapRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/map/MapRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/util/MapProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chernikov/simulation/util/MapProperties.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,15 +33,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.chernikov.simulation.Main" />
@@ -82,7 +70,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1689662356942</updated>
-      <workItem from="1689662358088" duration="12849000" />
+      <workItem from="1689662358088" duration="13604000" />
+      <workItem from="1689689465575" duration="1340000" />
     </task>
     <servers />
   </component>
